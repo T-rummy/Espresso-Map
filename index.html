@@ -8,13 +8,16 @@
     <title>Espresso Map</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <h1 class="title">Espresso Map<h1>
-    </header>
+    </header> -->
 
     <div class="form-div"> 
         <h2>Recipe is measured in grams, no need to specify unit of measurement is implied.</h2>
         <form class="row wide">
+            
+            <input class="form-el input-el" id="input" placeholder="Initial input" name="city" type="text" />
+
             <input class="form-el input-el"  id="intYield" placeholder="Initial Yield"  name="city" type="text"/>
             
 
@@ -26,6 +29,7 @@
 
             <input class="form-el input-el"  id="desTime" placeholder="Desired Time"  name="city" type="text"/>
             <button id="searchBtn" class="col-3 form-el search-btn" type="submit">Find Adjustment</button>
+            <button id="resetBtn" class="col-3 form-el search-btn" type="submit">Reset</button>
         </form>
 
 <script src="assets/js/script.js"></script>  
