@@ -6,7 +6,7 @@ var searchBtnEl = document.querySelector("#searchBtn");
 var input = document.querySelector("#input");
 var resetBtnEl = document.querySelector("#resetBtn");
 
-var findAdjustment = function(event){
+const findAdjustment = (event) => {
     event.preventDefault();
 //     var gramsPerSe = (intYieldEl.value.trim() / intTimeEl.value.trim());
 //     console.log(gramsPerSe);
@@ -47,11 +47,11 @@ var findAdjustment = function(event){
             var finalAdjustment = "";
             if (timeBeforeGrindAdjust < desiredTime) {
                 finalAdjustment = (desiredTime - timeBeforeGrindAdjust) / 2.5;
-                alert("Turn the dial " + Math.round((finalAdjustment * 2 + .5)) / 2.0 + " ticks " + adjust2 + " to get your desired shot of " + desiredYield +
+                alert("Turn the dial " + Math.round((finalAdjustment * 2)) / 2.0 + " ticks " + adjust2 + " to get your desired shot of " + desiredYield +
                         " grams in " + desiredTime + " seconds.");
             }else {
                 finalAdjustment = (timeBeforeGrindAdjust - desiredTime) / 2.5;
-                alert("Turn the dial " + Math.round((finalAdjustment * 2 + .5))/ 2.0 + " ticks " + adjust1 + " to get your desired shot of " + desiredYield +
+                alert("Turn the dial " + Math.round((finalAdjustment * 2))/ 2.0 + " ticks " + adjust1 + " to get your desired shot of " + desiredYield +
                         " grams in " + desiredTime + " seconds.");
             }
 
