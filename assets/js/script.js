@@ -45,7 +45,7 @@ const findAdjustment = (event) => {
             var timeBeforeGrindAdjust = desiredYield / gramPerSe;
 
             var finalAdjustment = "";
-            if (desiredTime == timeBeforeGrindAdjust) {
+            if ((timeBeforeGrindAdjust - desiredTime) / 2.5 === 0) {
                 alert("No grind adjustment is necessary");
             }
             else if (timeBeforeGrindAdjust < desiredTime) {
