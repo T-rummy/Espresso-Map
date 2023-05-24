@@ -45,7 +45,10 @@ const findAdjustment = (event) => {
             var timeBeforeGrindAdjust = desiredYield / gramPerSe;
 
             var finalAdjustment = "";
-            if (timeBeforeGrindAdjust < desiredTime) {
+            if (intYield === desiredYield && intTime === desiredTime) {
+                alert("No grind adjustment is necessary");
+            }
+            else if (timeBeforeGrindAdjust < desiredTime) {
                 finalAdjustment = (desiredTime - timeBeforeGrindAdjust) / 2.5;
                 alert("Turn the dial " + Math.round((finalAdjustment * 2)) / 2.0 + " ticks " + adjust2 + " to get your desired shot of " + desiredYield +
                         " grams in " + desiredTime + " seconds.");
@@ -53,7 +56,7 @@ const findAdjustment = (event) => {
                 finalAdjustment = (timeBeforeGrindAdjust - desiredTime) / 2.5;
                 alert("Turn the dial " + Math.round((finalAdjustment * 2))/ 2.0 + " ticks " + adjust1 + " to get your desired shot of " + desiredYield +
                         " grams in " + desiredTime + " seconds.");
-            }
+            } 
 
 
 
