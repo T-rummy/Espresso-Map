@@ -6,6 +6,7 @@ var searchBtnEl = document.querySelector("#searchBtn");
 var input = document.querySelector("#input");
 var resetBtnEl = document.querySelector("#resetBtn");
 
+
 const findAdjustment = (event) => {
     event.preventDefault();
 //     var gramsPerSe = (intYieldEl.value.trim() / intTimeEl.value.trim());
@@ -45,6 +46,8 @@ const findAdjustment = (event) => {
             var timeBeforeGrindAdjust = desiredYield / gramPerSe;
 
             var finalAdjustment = "";
+
+            
             if ((timeBeforeGrindAdjust - desiredTime) / 2.5 === 0) {
                 alert("No grind adjustment is necessary");
             }
@@ -57,17 +60,21 @@ const findAdjustment = (event) => {
                 alert("Turn the dial " + Math.round((finalAdjustment * 2))/ 2.0 + " ticks " + adjust1 + " to get your desired shot of " + desiredYield +
                         " grams in " + desiredTime + " seconds.");
             } 
+      
+    }
 
 
-
-        }
+ 
     
-        const clearForm = () => {
+    
+        const clearForm = (event) => {
+            
             intTimeEl.reset();
             intYieldEl.reset();
             desTimeEl.reset();
             desYieldEl.reset();
             input.reset();
+            event.preventDefault();
         }
 
 searchBtnEl.addEventListener("click", findAdjustment);
