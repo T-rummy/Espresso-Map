@@ -13,13 +13,6 @@
     
  }
 
-.foot {
-     font-size: 15px;
-     border-top: 1px solid black;
-     width: 100vw;
-     
-     
- }
  form {
      height: 100vh;
  }
@@ -28,11 +21,6 @@
  }
  label {
      font-size: smaller;
- }
- @media screen and (max-width: 800px){
-    .foot {
-            font-size: 9px;
-        }
  }
 
 
